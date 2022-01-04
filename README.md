@@ -98,3 +98,9 @@ python train.py
 ```
 
 注意：在本项目中，若test与validate的模型文件地址非空，将优先进行validate与test
+
+## Credit
+
+Imagenet : https://github.com/jiweibo/ImageNet
+Face X-ray : - https://github.com/AlgoHunt/Face-Xray
+             - https://github.com/neverUseThisName/Face-X-Ray
