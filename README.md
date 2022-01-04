@@ -69,7 +69,7 @@ python dataSetGenerator_cross.py
 
 ### 数据集
 
-基于上述方法得到的用于实际训练与测试的数据集，我们已将其放于交大云盘之上，具体连接如下：
+基于上述方法得到的用于实际训练与测试的数据集，我们已将其放于交大云盘之上，具体连接如下 : https://jbox.sjtu.edu.cn/l/t1clNo
 
 对于其中的.pkl文件，可以将其至于`pkl_data`目录下，通过输入以下指令进行读取，读取到的文件会在训练与测试所用目录`ResNet34+PCL`的`data`与`test_data`文件夹下
 
