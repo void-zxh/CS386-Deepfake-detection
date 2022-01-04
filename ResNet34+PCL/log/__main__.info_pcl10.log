@@ -1,0 +1,720 @@
+2021-12-24 10:15:14,544 - __main__ - INFO - use 2 gpus
+2021-12-24 10:15:14,544 - __main__ - INFO - args: Namespace(accumulation_steps=1, apex=False, batch_size=128, checkpoints='./checkpoints', epochs=100, evaluate=None, input_image_size=256, log='./log', loss_lambda=10, lr=5e-05, milestones=[30, 60, 90], momentum=0.9, network='resnet34', num_classes=2, num_workers=0, pretrained=True, print_interval=100, resume='./checkpoints/latest.pth', seed=0, test=None, weight_decay=0.0001)
+2021-12-24 10:15:14,544 - __main__ - INFO - start loading data
+2021-12-24 10:15:14,903 - __main__ - INFO - finish loading data
+2021-12-24 10:15:14,903 - __main__ - INFO - creating model 'resnet34'
+2021-12-24 10:15:15,317 - __main__ - INFO - model: 'resnet34', flops: 4.828G, params: 21.417M
+2021-12-24 10:15:15,317 - __main__ - INFO - conv1.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - conv2.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - conv3.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - bn1.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - bn1.bias,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.0.conv1.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.0.bn1.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.0.bn1.bias,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.0.conv2.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.0.bn2.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.0.bn2.bias,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.1.conv1.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.1.bn1.weight,True
+2021-12-24 10:15:15,317 - __main__ - INFO - layer1.1.bn1.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.1.conv2.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.1.bn2.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.1.bn2.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.2.conv1.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.2.bn1.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.2.bn1.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.2.conv2.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.2.bn2.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer1.2.bn2.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.conv1.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.bn1.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.bn1.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.conv2.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.bn2.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.bn2.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.downsample.0.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.downsample.1.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.0.downsample.1.bias,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.1.conv1.weight,True
+2021-12-24 10:15:15,318 - __main__ - INFO - layer2.1.bn1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.1.bn1.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.1.conv2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.1.bn2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.1.bn2.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.2.conv1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.2.bn1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.2.bn1.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.2.conv2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.2.bn2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.2.bn2.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.3.conv1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.3.bn1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.3.bn1.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.3.conv2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.3.bn2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer2.3.bn2.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.conv1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.bn1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.bn1.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.conv2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.bn2.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.bn2.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.downsample.0.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.downsample.1.weight,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.0.downsample.1.bias,True
+2021-12-24 10:15:15,319 - __main__ - INFO - layer3.1.conv1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.1.bn1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.1.bn1.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.1.conv2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.1.bn2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.1.bn2.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.2.conv1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.2.bn1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.2.bn1.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.2.conv2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.2.bn2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.2.bn2.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.3.conv1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.3.bn1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.3.bn1.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.3.conv2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.3.bn2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.3.bn2.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.4.conv1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.4.bn1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.4.bn1.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.4.conv2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.4.bn2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.4.bn2.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.5.conv1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.5.bn1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.5.bn1.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.5.conv2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.5.bn2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer3.5.bn2.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer4.0.conv1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer4.0.bn1.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer4.0.bn1.bias,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer4.0.conv2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer4.0.bn2.weight,True
+2021-12-24 10:15:15,320 - __main__ - INFO - layer4.0.bn2.bias,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.0.downsample.0.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.0.downsample.1.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.0.downsample.1.bias,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.1.conv1.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.1.bn1.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.1.bn1.bias,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.1.conv2.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.1.bn2.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.1.bn2.bias,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.2.conv1.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.2.bn1.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.2.bn1.bias,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.2.conv2.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.2.bn2.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - layer4.2.bn2.bias,True
+2021-12-24 10:15:15,321 - __main__ - INFO - fc.weight,True
+2021-12-24 10:15:15,321 - __main__ - INFO - fc.bias,True
+2021-12-24 10:15:17,034 - __main__ - INFO - start training
+2021-12-24 10:16:22,306 - __main__ - INFO - train: epoch 001, iter [0100, 0466], lr: 0.000050, this batch auc: 0.75540, top1 acc: 71.88%, top5 acc: 100.00%, loss_total: 5.96
+2021-12-24 10:17:23,409 - __main__ - INFO - train: epoch 001, iter [0200, 0466], lr: 0.000050, this batch auc: 0.83085, top1 acc: 73.44%, top5 acc: 100.00%, loss_total: 5.08
+2021-12-24 10:18:24,338 - __main__ - INFO - train: epoch 001, iter [0300, 0466], lr: 0.000050, this batch auc: 0.89023, top1 acc: 84.38%, top5 acc: 100.00%, loss_total: 5.06
+2021-12-24 10:19:25,884 - __main__ - INFO - train: epoch 001, iter [0400, 0466], lr: 0.000050, this batch auc: 0.87424, top1 acc: 81.25%, top5 acc: 100.00%, loss_total: 4.67
+2021-12-24 10:20:08,092 - __main__ - INFO - train: epoch 001, top1 acc: 76.77%, top5 acc: 100.00%， losses: 5.29
+2021-12-24 10:20:46,445 - __main__ - INFO - val: epoch 001, auc: 0.93344, top1 acc: 84.32%, top5 acc: 100.00%, throughput: 225.51sample/s
+2021-12-24 10:21:49,210 - __main__ - INFO - train: epoch 002, iter [0100, 0466], lr: 0.000050, this batch auc: 0.90087, top1 acc: 82.81%, top5 acc: 100.00%, loss_total: 4.31
+2021-12-24 10:22:51,754 - __main__ - INFO - train: epoch 002, iter [0200, 0466], lr: 0.000050, this batch auc: 0.91831, top1 acc: 79.69%, top5 acc: 100.00%, loss_total: 4.27
+2021-12-24 10:23:52,586 - __main__ - INFO - train: epoch 002, iter [0300, 0466], lr: 0.000050, this batch auc: 0.96766, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 4.06
+2021-12-24 10:24:53,561 - __main__ - INFO - train: epoch 002, iter [0400, 0466], lr: 0.000050, this batch auc: 0.93872, top1 acc: 87.50%, top5 acc: 100.00%, loss_total: 4.05
+2021-12-24 10:25:33,494 - __main__ - INFO - train: epoch 002, top1 acc: 84.38%, top5 acc: 100.00%， losses: 4.48
+2021-12-24 10:26:11,010 - __main__ - INFO - val: epoch 002, auc: 0.95931, top1 acc: 88.65%, top5 acc: 100.00%, throughput: 230.54sample/s
+2021-12-24 10:27:14,075 - __main__ - INFO - train: epoch 003, iter [0100, 0466], lr: 0.000050, this batch auc: 0.95866, top1 acc: 86.72%, top5 acc: 100.00%, loss_total: 4.01
+2021-12-24 10:28:14,588 - __main__ - INFO - train: epoch 003, iter [0200, 0466], lr: 0.000050, this batch auc: 0.94113, top1 acc: 85.16%, top5 acc: 100.00%, loss_total: 4.06
+2021-12-24 10:29:15,785 - __main__ - INFO - train: epoch 003, iter [0300, 0466], lr: 0.000050, this batch auc: 0.96375, top1 acc: 89.84%, top5 acc: 100.00%, loss_total: 4.11
+2021-12-24 10:30:17,168 - __main__ - INFO - train: epoch 003, iter [0400, 0466], lr: 0.000050, this batch auc: 0.96538, top1 acc: 89.84%, top5 acc: 100.00%, loss_total: 4.00
+2021-12-24 10:30:57,236 - __main__ - INFO - train: epoch 003, top1 acc: 86.75%, top5 acc: 100.00%， losses: 4.21
+2021-12-24 10:31:35,279 - __main__ - INFO - val: epoch 003, auc: 0.96275, top1 acc: 88.91%, top5 acc: 100.00%, throughput: 227.34sample/s
+2021-12-24 10:32:39,269 - __main__ - INFO - train: epoch 004, iter [0100, 0466], lr: 0.000050, this batch auc: 0.97230, top1 acc: 89.06%, top5 acc: 100.00%, loss_total: 3.64
+2021-12-24 10:33:39,821 - __main__ - INFO - train: epoch 004, iter [0200, 0466], lr: 0.000050, this batch auc: 0.95896, top1 acc: 88.28%, top5 acc: 100.00%, loss_total: 4.01
+2021-12-24 10:34:40,376 - __main__ - INFO - train: epoch 004, iter [0300, 0466], lr: 0.000050, this batch auc: 0.95767, top1 acc: 88.28%, top5 acc: 100.00%, loss_total: 4.34
+2021-12-24 10:35:42,856 - __main__ - INFO - train: epoch 004, iter [0400, 0466], lr: 0.000050, this batch auc: 0.93309, top1 acc: 85.94%, top5 acc: 100.00%, loss_total: 4.10
+2021-12-24 10:36:22,669 - __main__ - INFO - train: epoch 004, top1 acc: 88.04%, top5 acc: 100.00%， losses: 4.06
+2021-12-24 10:37:01,027 - __main__ - INFO - val: epoch 004, auc: 0.95889, top1 acc: 88.49%, top5 acc: 100.00%, throughput: 225.48sample/s
+2021-12-24 10:38:05,980 - __main__ - INFO - train: epoch 005, iter [0100, 0466], lr: 0.000050, this batch auc: 0.96155, top1 acc: 89.06%, top5 acc: 100.00%, loss_total: 3.73
+2021-12-24 10:39:07,603 - __main__ - INFO - train: epoch 005, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98323, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 3.68
+2021-12-24 10:40:09,607 - __main__ - INFO - train: epoch 005, iter [0300, 0466], lr: 0.000050, this batch auc: 0.96361, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 4.10
+2021-12-24 10:41:10,477 - __main__ - INFO - train: epoch 005, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98974, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.73
+2021-12-24 10:41:49,876 - __main__ - INFO - train: epoch 005, top1 acc: 89.52%, top5 acc: 100.00%， losses: 3.93
+2021-12-24 10:42:28,170 - __main__ - INFO - val: epoch 005, auc: 0.96678, top1 acc: 90.70%, top5 acc: 100.00%, throughput: 225.85sample/s
+2021-12-24 10:43:32,556 - __main__ - INFO - train: epoch 006, iter [0100, 0466], lr: 0.000050, this batch auc: 0.95900, top1 acc: 89.84%, top5 acc: 100.00%, loss_total: 3.69
+2021-12-24 10:44:33,782 - __main__ - INFO - train: epoch 006, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98532, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.64
+2021-12-24 10:45:34,168 - __main__ - INFO - train: epoch 006, iter [0300, 0466], lr: 0.000050, this batch auc: 0.93748, top1 acc: 85.16%, top5 acc: 100.00%, loss_total: 3.91
+2021-12-24 10:46:35,182 - __main__ - INFO - train: epoch 006, iter [0400, 0466], lr: 0.000050, this batch auc: 0.97266, top1 acc: 90.62%, top5 acc: 100.00%, loss_total: 3.83
+2021-12-24 10:47:14,497 - __main__ - INFO - train: epoch 006, top1 acc: 90.27%, top5 acc: 100.00%， losses: 3.84
+2021-12-24 10:47:52,048 - __main__ - INFO - val: epoch 006, auc: 0.97104, top1 acc: 90.84%, top5 acc: 100.00%, throughput: 230.33sample/s
+2021-12-24 10:48:55,829 - __main__ - INFO - train: epoch 007, iter [0100, 0466], lr: 0.000050, this batch auc: 0.96318, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 4.26
+2021-12-24 10:49:57,033 - __main__ - INFO - train: epoch 007, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98047, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.58
+2021-12-24 10:50:57,778 - __main__ - INFO - train: epoch 007, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98099, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 3.77
+2021-12-24 10:51:58,797 - __main__ - INFO - train: epoch 007, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98214, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 4.11
+2021-12-24 10:52:38,978 - __main__ - INFO - train: epoch 007, top1 acc: 90.92%, top5 acc: 100.00%， losses: 3.76
+2021-12-24 10:53:15,799 - __main__ - INFO - val: epoch 007, auc: 0.97327, top1 acc: 91.11%, top5 acc: 100.00%, throughput: 234.88sample/s
+2021-12-24 10:54:20,668 - __main__ - INFO - train: epoch 008, iter [0100, 0466], lr: 0.000050, this batch auc: 0.96505, top1 acc: 86.72%, top5 acc: 100.00%, loss_total: 3.20
+2021-12-24 10:55:21,715 - __main__ - INFO - train: epoch 008, iter [0200, 0466], lr: 0.000050, this batch auc: 0.97756, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 4.02
+2021-12-24 10:56:22,469 - __main__ - INFO - train: epoch 008, iter [0300, 0466], lr: 0.000050, this batch auc: 0.97793, top1 acc: 90.62%, top5 acc: 100.00%, loss_total: 3.28
+2021-12-24 10:57:23,835 - __main__ - INFO - train: epoch 008, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99422, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.54
+2021-12-24 10:58:03,297 - __main__ - INFO - train: epoch 008, top1 acc: 91.40%, top5 acc: 100.00%， losses: 3.70
+2021-12-24 10:58:39,537 - __main__ - INFO - val: epoch 008, auc: 0.97123, top1 acc: 88.27%, top5 acc: 100.00%, throughput: 238.65sample/s
+2021-12-24 10:59:42,343 - __main__ - INFO - train: epoch 009, iter [0100, 0466], lr: 0.000050, this batch auc: 0.97603, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.44
+2021-12-24 11:00:43,484 - __main__ - INFO - train: epoch 009, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98214, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.79
+2021-12-24 11:01:43,876 - __main__ - INFO - train: epoch 009, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99271, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.63
+2021-12-24 11:02:44,959 - __main__ - INFO - train: epoch 009, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98248, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.59
+2021-12-24 11:03:25,083 - __main__ - INFO - train: epoch 009, top1 acc: 91.80%, top5 acc: 100.00%， losses: 3.65
+2021-12-24 11:04:03,992 - __main__ - INFO - val: epoch 009, auc: 0.97386, top1 acc: 91.65%, top5 acc: 100.00%, throughput: 222.28sample/s
+2021-12-24 11:05:07,070 - __main__ - INFO - train: epoch 010, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98358, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.76
+2021-12-24 11:06:08,297 - __main__ - INFO - train: epoch 010, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98550, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.65
+2021-12-24 11:07:08,336 - __main__ - INFO - train: epoch 010, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99439, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.53
+2021-12-24 11:08:09,800 - __main__ - INFO - train: epoch 010, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99243, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.70
+2021-12-24 11:08:49,990 - __main__ - INFO - train: epoch 010, top1 acc: 92.16%, top5 acc: 100.00%， losses: 3.60
+2021-12-24 11:09:28,438 - __main__ - INFO - val: epoch 010, auc: 0.97169, top1 acc: 91.36%, top5 acc: 100.00%, throughput: 224.95sample/s
+2021-12-24 11:10:32,688 - __main__ - INFO - train: epoch 011, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99009, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.55
+2021-12-24 11:11:33,785 - __main__ - INFO - train: epoch 011, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98021, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.50
+2021-12-24 11:12:34,992 - __main__ - INFO - train: epoch 011, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98385, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.37
+2021-12-24 11:13:35,687 - __main__ - INFO - train: epoch 011, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98863, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.64
+2021-12-24 11:14:16,264 - __main__ - INFO - train: epoch 011, top1 acc: 92.57%, top5 acc: 100.00%， losses: 3.55
+2021-12-24 11:14:54,357 - __main__ - INFO - val: epoch 011, auc: 0.96981, top1 acc: 89.67%, top5 acc: 100.00%, throughput: 227.04sample/s
+2021-12-24 11:15:57,433 - __main__ - INFO - train: epoch 012, iter [0100, 0466], lr: 0.000050, this batch auc: 0.96719, top1 acc: 89.06%, top5 acc: 100.00%, loss_total: 3.78
+2021-12-24 11:16:58,967 - __main__ - INFO - train: epoch 012, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98642, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.35
+2021-12-24 11:17:59,598 - __main__ - INFO - train: epoch 012, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99178, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.44
+2021-12-24 11:19:00,342 - __main__ - INFO - train: epoch 012, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98742, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 3.63
+2021-12-24 11:19:40,482 - __main__ - INFO - train: epoch 012, top1 acc: 92.94%, top5 acc: 100.00%， losses: 3.51
+2021-12-24 11:20:17,701 - __main__ - INFO - val: epoch 012, auc: 0.97745, top1 acc: 92.34%, top5 acc: 100.00%, throughput: 232.38sample/s
+2021-12-24 11:21:21,845 - __main__ - INFO - train: epoch 013, iter [0100, 0466], lr: 0.000050, this batch auc: 0.97484, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.32
+2021-12-24 11:22:23,417 - __main__ - INFO - train: epoch 013, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99096, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.44
+2021-12-24 11:23:23,685 - __main__ - INFO - train: epoch 013, iter [0300, 0466], lr: 0.000050, this batch auc: 0.97660, top1 acc: 89.84%, top5 acc: 100.00%, loss_total: 3.53
+2021-12-24 11:24:23,924 - __main__ - INFO - train: epoch 013, iter [0400, 0466], lr: 0.000050, this batch auc: 0.97987, top1 acc: 87.50%, top5 acc: 100.00%, loss_total: 3.49
+2021-12-24 11:25:03,698 - __main__ - INFO - train: epoch 013, top1 acc: 93.17%, top5 acc: 100.00%， losses: 3.48
+2021-12-24 11:25:41,052 - __main__ - INFO - val: epoch 013, auc: 0.97823, top1 acc: 92.25%, top5 acc: 100.00%, throughput: 231.53sample/s
+2021-12-24 11:26:45,124 - __main__ - INFO - train: epoch 014, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98776, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.40
+2021-12-24 11:27:47,133 - __main__ - INFO - train: epoch 014, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99702, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.39
+2021-12-24 11:28:48,483 - __main__ - INFO - train: epoch 014, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99167, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.43
+2021-12-24 11:29:48,989 - __main__ - INFO - train: epoch 014, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99159, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.44
+2021-12-24 11:30:29,641 - __main__ - INFO - train: epoch 014, top1 acc: 93.34%, top5 acc: 100.00%， losses: 3.44
+2021-12-24 11:31:06,309 - __main__ - INFO - val: epoch 014, auc: 0.97695, top1 acc: 92.11%, top5 acc: 100.00%, throughput: 235.87sample/s
+2021-12-24 11:32:10,136 - __main__ - INFO - train: epoch 015, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98835, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.64
+2021-12-24 11:33:10,884 - __main__ - INFO - train: epoch 015, iter [0200, 0466], lr: 0.000050, this batch auc: 0.97321, top1 acc: 90.62%, top5 acc: 100.00%, loss_total: 3.78
+2021-12-24 11:34:12,131 - __main__ - INFO - train: epoch 015, iter [0300, 0466], lr: 0.000050, this batch auc: 0.97925, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.51
+2021-12-24 11:35:13,478 - __main__ - INFO - train: epoch 015, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98487, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.52
+2021-12-24 11:35:53,311 - __main__ - INFO - train: epoch 015, top1 acc: 93.70%, top5 acc: 100.00%， losses: 3.41
+2021-12-24 11:36:31,522 - __main__ - INFO - val: epoch 015, auc: 0.97375, top1 acc: 90.77%, top5 acc: 100.00%, throughput: 226.34sample/s
+2021-12-24 11:37:36,031 - __main__ - INFO - train: epoch 016, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98699, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 11:38:39,006 - __main__ - INFO - train: epoch 016, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98440, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.64
+2021-12-24 11:39:38,409 - __main__ - INFO - train: epoch 016, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98715, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.60
+2021-12-24 11:40:36,336 - __main__ - INFO - train: epoch 016, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98893, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.21
+2021-12-24 11:41:14,000 - __main__ - INFO - train: epoch 016, top1 acc: 93.69%, top5 acc: 100.00%， losses: 3.39
+2021-12-24 11:41:48,702 - __main__ - INFO - val: epoch 016, auc: 0.97437, top1 acc: 91.64%, top5 acc: 100.00%, throughput: 249.23sample/s
+2021-12-24 11:42:48,494 - __main__ - INFO - train: epoch 017, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99491, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.32
+2021-12-24 11:43:46,697 - __main__ - INFO - train: epoch 017, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99845, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 11:44:44,576 - __main__ - INFO - train: epoch 017, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98802, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.18
+2021-12-24 11:45:42,784 - __main__ - INFO - train: epoch 017, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99114, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.58
+2021-12-24 11:46:20,904 - __main__ - INFO - train: epoch 017, top1 acc: 93.82%, top5 acc: 100.00%， losses: 3.37
+2021-12-24 11:46:56,023 - __main__ - INFO - val: epoch 017, auc: 0.97491, top1 acc: 92.13%, top5 acc: 100.00%, throughput: 246.28sample/s
+2021-12-24 11:47:56,717 - __main__ - INFO - train: epoch 018, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98829, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.21
+2021-12-24 11:48:55,049 - __main__ - INFO - train: epoch 018, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98109, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.65
+2021-12-24 11:49:52,479 - __main__ - INFO - train: epoch 018, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98577, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.47
+2021-12-24 11:50:50,916 - __main__ - INFO - train: epoch 018, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98165, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 11:51:29,384 - __main__ - INFO - train: epoch 018, top1 acc: 93.95%, top5 acc: 100.00%， losses: 3.35
+2021-12-24 11:52:05,375 - __main__ - INFO - val: epoch 018, auc: 0.96846, top1 acc: 91.05%, top5 acc: 100.00%, throughput: 240.30sample/s
+2021-12-24 11:53:06,448 - __main__ - INFO - train: epoch 019, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99064, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 11:54:03,777 - __main__ - INFO - train: epoch 019, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99004, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.07
+2021-12-24 11:55:02,126 - __main__ - INFO - train: epoch 019, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98268, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 3.38
+2021-12-24 11:55:59,366 - __main__ - INFO - train: epoch 019, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98930, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.24
+2021-12-24 11:56:37,169 - __main__ - INFO - train: epoch 019, top1 acc: 94.24%, top5 acc: 100.00%， losses: 3.33
+2021-12-24 11:57:11,731 - __main__ - INFO - val: epoch 019, auc: 0.97129, top1 acc: 91.48%, top5 acc: 100.00%, throughput: 250.24sample/s
+2021-12-24 11:58:13,277 - __main__ - INFO - train: epoch 020, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99612, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.48
+2021-12-24 11:59:11,502 - __main__ - INFO - train: epoch 020, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98489, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.50
+2021-12-24 12:00:09,232 - __main__ - INFO - train: epoch 020, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99393, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.20
+2021-12-24 12:01:07,447 - __main__ - INFO - train: epoch 020, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99211, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.57
+2021-12-24 12:01:45,289 - __main__ - INFO - train: epoch 020, top1 acc: 94.35%, top5 acc: 100.00%， losses: 3.30
+2021-12-24 12:02:20,766 - __main__ - INFO - val: epoch 020, auc: 0.97576, top1 acc: 92.28%, top5 acc: 100.00%, throughput: 243.78sample/s
+2021-12-24 12:03:21,803 - __main__ - INFO - train: epoch 021, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99371, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 12:04:20,307 - __main__ - INFO - train: epoch 021, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99168, top1 acc: 89.84%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 12:05:18,039 - __main__ - INFO - train: epoch 021, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99141, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.22
+2021-12-24 12:06:15,227 - __main__ - INFO - train: epoch 021, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98913, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.16
+2021-12-24 12:06:53,922 - __main__ - INFO - train: epoch 021, top1 acc: 94.47%, top5 acc: 100.00%， losses: 3.29
+2021-12-24 12:07:28,943 - __main__ - INFO - val: epoch 021, auc: 0.96861, top1 acc: 90.56%, top5 acc: 100.00%, throughput: 246.95sample/s
+2021-12-24 12:08:29,649 - __main__ - INFO - train: epoch 022, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98937, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 12:09:28,284 - __main__ - INFO - train: epoch 022, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98550, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.50
+2021-12-24 12:10:26,104 - __main__ - INFO - train: epoch 022, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98153, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.30
+2021-12-24 12:11:24,668 - __main__ - INFO - train: epoch 022, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98616, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.11
+2021-12-24 12:12:01,867 - __main__ - INFO - train: epoch 022, top1 acc: 94.59%, top5 acc: 100.00%， losses: 3.26
+2021-12-24 12:12:37,330 - __main__ - INFO - val: epoch 022, auc: 0.96820, top1 acc: 89.17%, top5 acc: 100.00%, throughput: 243.88sample/s
+2021-12-24 12:13:38,125 - __main__ - INFO - train: epoch 023, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99924, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 12:14:35,925 - __main__ - INFO - train: epoch 023, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98988, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.62
+2021-12-24 12:15:35,022 - __main__ - INFO - train: epoch 023, iter [0300, 0466], lr: 0.000050, this batch auc: 0.97975, top1 acc: 91.41%, top5 acc: 100.00%, loss_total: 3.89
+2021-12-24 12:16:33,257 - __main__ - INFO - train: epoch 023, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99167, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.19
+2021-12-24 12:17:11,349 - __main__ - INFO - train: epoch 023, top1 acc: 94.58%, top5 acc: 100.00%， losses: 3.26
+2021-12-24 12:17:46,795 - __main__ - INFO - val: epoch 023, auc: 0.97273, top1 acc: 90.71%, top5 acc: 100.00%, throughput: 244.00sample/s
+2021-12-24 12:18:47,033 - __main__ - INFO - train: epoch 024, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99194, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.75
+2021-12-24 12:19:44,925 - __main__ - INFO - train: epoch 024, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99685, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.21
+2021-12-24 12:20:43,327 - __main__ - INFO - train: epoch 024, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99401, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 12:21:41,253 - __main__ - INFO - train: epoch 024, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98834, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.57
+2021-12-24 12:22:19,426 - __main__ - INFO - train: epoch 024, top1 acc: 94.77%, top5 acc: 100.00%， losses: 3.24
+2021-12-24 12:22:54,777 - __main__ - INFO - val: epoch 024, auc: 0.97288, top1 acc: 91.07%, top5 acc: 100.00%, throughput: 244.65sample/s
+2021-12-24 12:23:55,835 - __main__ - INFO - train: epoch 025, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99422, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.40
+2021-12-24 12:24:54,705 - __main__ - INFO - train: epoch 025, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99125, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.40
+2021-12-24 12:25:52,990 - __main__ - INFO - train: epoch 025, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99950, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.78
+2021-12-24 12:26:51,206 - __main__ - INFO - train: epoch 025, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99867, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.30
+2021-12-24 12:27:28,481 - __main__ - INFO - train: epoch 025, top1 acc: 94.86%, top5 acc: 100.00%， losses: 3.22
+2021-12-24 12:28:04,177 - __main__ - INFO - val: epoch 025, auc: 0.97089, top1 acc: 90.97%, top5 acc: 100.00%, throughput: 242.29sample/s
+2021-12-24 12:29:04,744 - __main__ - INFO - train: epoch 026, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99631, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 12:30:02,424 - __main__ - INFO - train: epoch 026, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99449, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 12:31:01,204 - __main__ - INFO - train: epoch 026, iter [0300, 0466], lr: 0.000050, this batch auc: 0.98796, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 12:31:59,725 - __main__ - INFO - train: epoch 026, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99682, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.13
+2021-12-24 12:32:38,536 - __main__ - INFO - train: epoch 026, top1 acc: 95.04%, top5 acc: 100.00%， losses: 3.21
+2021-12-24 12:33:14,083 - __main__ - INFO - val: epoch 026, auc: 0.97384, top1 acc: 91.46%, top5 acc: 100.00%, throughput: 243.31sample/s
+2021-12-24 12:34:14,251 - __main__ - INFO - train: epoch 027, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99798, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.91
+2021-12-24 12:35:12,130 - __main__ - INFO - train: epoch 027, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99185, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.27
+2021-12-24 12:36:09,909 - __main__ - INFO - train: epoch 027, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99310, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.83
+2021-12-24 12:37:09,180 - __main__ - INFO - train: epoch 027, iter [0400, 0466], lr: 0.000050, this batch auc: 0.98595, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.38
+2021-12-24 12:37:46,667 - __main__ - INFO - train: epoch 027, top1 acc: 95.00%, top5 acc: 100.00%， losses: 3.20
+2021-12-24 12:38:22,238 - __main__ - INFO - val: epoch 027, auc: 0.97007, top1 acc: 91.19%, top5 acc: 100.00%, throughput: 243.14sample/s
+2021-12-24 12:39:22,485 - __main__ - INFO - train: epoch 028, iter [0100, 0466], lr: 0.000050, this batch auc: 0.98963, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.91
+2021-12-24 12:40:22,127 - __main__ - INFO - train: epoch 028, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99518, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.20
+2021-12-24 12:41:23,990 - __main__ - INFO - train: epoch 028, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99751, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.94
+2021-12-24 12:42:25,699 - __main__ - INFO - train: epoch 028, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99193, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.22
+2021-12-24 12:43:05,572 - __main__ - INFO - train: epoch 028, top1 acc: 95.24%, top5 acc: 100.00%， losses: 3.18
+2021-12-24 12:43:42,731 - __main__ - INFO - val: epoch 028, auc: 0.96935, top1 acc: 88.79%, top5 acc: 100.00%, throughput: 232.76sample/s
+2021-12-24 12:44:45,769 - __main__ - INFO - train: epoch 029, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99613, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.16
+2021-12-24 12:45:46,862 - __main__ - INFO - train: epoch 029, iter [0200, 0466], lr: 0.000050, this batch auc: 0.99270, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 2.85
+2021-12-24 12:46:48,482 - __main__ - INFO - train: epoch 029, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99197, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.14
+2021-12-24 12:47:49,061 - __main__ - INFO - train: epoch 029, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99064, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.25
+2021-12-24 12:48:29,915 - __main__ - INFO - train: epoch 029, top1 acc: 95.30%, top5 acc: 100.00%， losses: 3.17
+2021-12-24 12:49:08,073 - __main__ - INFO - val: epoch 029, auc: 0.97430, top1 acc: 91.45%, top5 acc: 100.00%, throughput: 226.66sample/s
+2021-12-24 12:50:11,712 - __main__ - INFO - train: epoch 030, iter [0100, 0466], lr: 0.000050, this batch auc: 0.99107, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.39
+2021-12-24 12:51:11,966 - __main__ - INFO - train: epoch 030, iter [0200, 0466], lr: 0.000050, this batch auc: 0.98829, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 12:52:14,196 - __main__ - INFO - train: epoch 030, iter [0300, 0466], lr: 0.000050, this batch auc: 0.99926, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.80
+2021-12-24 12:53:15,283 - __main__ - INFO - train: epoch 030, iter [0400, 0466], lr: 0.000050, this batch auc: 0.99654, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.54
+2021-12-24 12:53:54,899 - __main__ - INFO - train: epoch 030, top1 acc: 95.32%, top5 acc: 100.00%， losses: 3.17
+2021-12-24 12:54:32,976 - __main__ - INFO - val: epoch 030, auc: 0.97487, top1 acc: 90.67%, top5 acc: 100.00%, throughput: 227.14sample/s
+2021-12-24 12:55:36,232 - __main__ - INFO - train: epoch 031, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99287, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.07
+2021-12-24 12:56:37,308 - __main__ - INFO - train: epoch 031, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99799, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 12:57:39,473 - __main__ - INFO - train: epoch 031, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99950, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.73
+2021-12-24 12:58:41,263 - __main__ - INFO - train: epoch 031, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99479, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.98
+2021-12-24 12:59:21,027 - __main__ - INFO - train: epoch 031, top1 acc: 96.07%, top5 acc: 100.00%， losses: 3.09
+2021-12-24 12:59:59,565 - __main__ - INFO - val: epoch 031, auc: 0.97975, top1 acc: 92.54%, top5 acc: 100.00%, throughput: 224.42sample/s
+2021-12-24 13:01:02,564 - __main__ - INFO - train: epoch 032, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99759, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.31
+2021-12-24 13:02:04,679 - __main__ - INFO - train: epoch 032, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99390, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.18
+2021-12-24 13:03:04,678 - __main__ - INFO - train: epoch 032, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99602, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.08
+2021-12-24 13:04:02,457 - __main__ - INFO - train: epoch 032, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99550, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.04
+2021-12-24 13:04:40,666 - __main__ - INFO - train: epoch 032, top1 acc: 96.48%, top5 acc: 100.00%， losses: 3.05
+2021-12-24 13:05:16,478 - __main__ - INFO - val: epoch 032, auc: 0.97850, top1 acc: 92.34%, top5 acc: 100.00%, throughput: 241.50sample/s
+2021-12-24 13:06:17,170 - __main__ - INFO - train: epoch 033, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99661, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 13:07:15,930 - __main__ - INFO - train: epoch 033, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99561, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.20
+2021-12-24 13:08:14,372 - __main__ - INFO - train: epoch 033, iter [0300, 0466], lr: 0.000005, this batch auc: 0.98902, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.61
+2021-12-24 13:09:12,036 - __main__ - INFO - train: epoch 033, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99892, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.04
+2021-12-24 13:09:49,877 - __main__ - INFO - train: epoch 033, top1 acc: 96.54%, top5 acc: 100.00%， losses: 3.04
+2021-12-24 13:10:27,166 - __main__ - INFO - val: epoch 033, auc: 0.97803, top1 acc: 92.24%, top5 acc: 100.00%, throughput: 231.94sample/s
+2021-12-24 13:11:28,083 - __main__ - INFO - train: epoch 034, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99349, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 13:12:27,410 - __main__ - INFO - train: epoch 034, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99661, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.00
+2021-12-24 13:13:25,937 - __main__ - INFO - train: epoch 034, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99587, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.08
+2021-12-24 13:14:23,756 - __main__ - INFO - train: epoch 034, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99436, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.13
+2021-12-24 13:15:01,460 - __main__ - INFO - train: epoch 034, top1 acc: 96.51%, top5 acc: 100.00%， losses: 3.04
+2021-12-24 13:15:38,329 - __main__ - INFO - val: epoch 034, auc: 0.97875, top1 acc: 92.39%, top5 acc: 100.00%, throughput: 234.58sample/s
+2021-12-24 13:16:38,998 - __main__ - INFO - train: epoch 035, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99690, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 13:17:36,809 - __main__ - INFO - train: epoch 035, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99688, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 13:18:35,874 - __main__ - INFO - train: epoch 035, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99513, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.19
+2021-12-24 13:19:34,936 - __main__ - INFO - train: epoch 035, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99821, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 13:20:12,351 - __main__ - INFO - train: epoch 035, top1 acc: 96.47%, top5 acc: 100.00%， losses: 3.04
+2021-12-24 13:20:47,821 - __main__ - INFO - val: epoch 035, auc: 0.97874, top1 acc: 92.57%, top5 acc: 100.00%, throughput: 243.84sample/s
+2021-12-24 13:21:48,786 - __main__ - INFO - train: epoch 036, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99602, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.09
+2021-12-24 13:22:46,224 - __main__ - INFO - train: epoch 036, iter [0200, 0466], lr: 0.000005, this batch auc: 0.98760, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 13:23:43,501 - __main__ - INFO - train: epoch 036, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99607, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.51
+2021-12-24 13:24:41,445 - __main__ - INFO - train: epoch 036, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99888, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.23
+2021-12-24 13:25:19,371 - __main__ - INFO - train: epoch 036, top1 acc: 96.68%, top5 acc: 100.00%， losses: 3.03
+2021-12-24 13:25:55,046 - __main__ - INFO - val: epoch 036, auc: 0.97866, top1 acc: 92.39%, top5 acc: 100.00%, throughput: 242.44sample/s
+2021-12-24 13:26:55,190 - __main__ - INFO - train: epoch 037, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99673, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.48
+2021-12-24 13:27:54,151 - __main__ - INFO - train: epoch 037, iter [0200, 0466], lr: 0.000005, this batch auc: 0.98932, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.13
+2021-12-24 13:28:52,800 - __main__ - INFO - train: epoch 037, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99888, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.27
+2021-12-24 13:29:50,323 - __main__ - INFO - train: epoch 037, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99427, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.16
+2021-12-24 13:30:28,595 - __main__ - INFO - train: epoch 037, top1 acc: 96.65%, top5 acc: 100.00%， losses: 3.02
+2021-12-24 13:31:04,199 - __main__ - INFO - val: epoch 037, auc: 0.97864, top1 acc: 92.44%, top5 acc: 100.00%, throughput: 242.92sample/s
+2021-12-24 13:32:05,517 - __main__ - INFO - train: epoch 038, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99744, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 13:33:02,341 - __main__ - INFO - train: epoch 038, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99726, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.77
+2021-12-24 13:34:00,823 - __main__ - INFO - train: epoch 038, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99795, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 13:34:59,085 - __main__ - INFO - train: epoch 038, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99842, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.16
+2021-12-24 13:35:36,970 - __main__ - INFO - train: epoch 038, top1 acc: 96.73%, top5 acc: 100.00%， losses: 3.02
+2021-12-24 13:36:12,186 - __main__ - INFO - val: epoch 038, auc: 0.97789, top1 acc: 92.41%, top5 acc: 100.00%, throughput: 245.59sample/s
+2021-12-24 13:37:13,100 - __main__ - INFO - train: epoch 039, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99740, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.18
+2021-12-24 13:38:12,831 - __main__ - INFO - train: epoch 039, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99407, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 2.79
+2021-12-24 13:39:11,668 - __main__ - INFO - train: epoch 039, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99827, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.88
+2021-12-24 13:40:10,183 - __main__ - INFO - train: epoch 039, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99069, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.58
+2021-12-24 13:40:48,881 - __main__ - INFO - train: epoch 039, top1 acc: 96.76%, top5 acc: 100.00%， losses: 3.02
+2021-12-24 13:41:24,418 - __main__ - INFO - val: epoch 039, auc: 0.97864, top1 acc: 92.34%, top5 acc: 100.00%, throughput: 243.38sample/s
+2021-12-24 13:42:25,316 - __main__ - INFO - train: epoch 040, iter [0100, 0466], lr: 0.000005, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.55
+2021-12-24 13:43:23,495 - __main__ - INFO - train: epoch 040, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99975, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.70
+2021-12-24 13:44:22,355 - __main__ - INFO - train: epoch 040, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99923, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 13:45:19,724 - __main__ - INFO - train: epoch 040, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99209, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 13:45:58,051 - __main__ - INFO - train: epoch 040, top1 acc: 96.76%, top5 acc: 100.00%， losses: 3.02
+2021-12-24 13:46:35,023 - __main__ - INFO - val: epoch 040, auc: 0.97846, top1 acc: 92.57%, top5 acc: 100.00%, throughput: 233.93sample/s
+2021-12-24 13:47:35,849 - __main__ - INFO - train: epoch 041, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99768, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 13:48:37,929 - __main__ - INFO - train: epoch 041, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99648, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.19
+2021-12-24 13:49:38,912 - __main__ - INFO - train: epoch 041, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99924, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.71
+2021-12-24 13:50:40,100 - __main__ - INFO - train: epoch 041, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99822, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 13:51:20,988 - __main__ - INFO - train: epoch 041, top1 acc: 96.86%, top5 acc: 100.00%， losses: 3.01
+2021-12-24 13:51:59,810 - __main__ - INFO - val: epoch 041, auc: 0.97962, top1 acc: 92.61%, top5 acc: 100.00%, throughput: 222.79sample/s
+2021-12-24 13:53:03,165 - __main__ - INFO - train: epoch 042, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99681, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.62
+2021-12-24 13:54:04,879 - __main__ - INFO - train: epoch 042, iter [0200, 0466], lr: 0.000005, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.94
+2021-12-24 13:55:06,263 - __main__ - INFO - train: epoch 042, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99756, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.69
+2021-12-24 13:56:07,847 - __main__ - INFO - train: epoch 042, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99410, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 13:56:49,648 - __main__ - INFO - train: epoch 042, top1 acc: 96.81%, top5 acc: 100.00%， losses: 3.01
+2021-12-24 13:57:27,212 - __main__ - INFO - val: epoch 042, auc: 0.97805, top1 acc: 92.39%, top5 acc: 100.00%, throughput: 230.25sample/s
+2021-12-24 13:58:32,175 - __main__ - INFO - train: epoch 043, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99850, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.84
+2021-12-24 13:59:33,226 - __main__ - INFO - train: epoch 043, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99274, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 14:00:33,287 - __main__ - INFO - train: epoch 043, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99698, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.75
+2021-12-24 14:01:34,871 - __main__ - INFO - train: epoch 043, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99644, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.22
+2021-12-24 14:02:15,748 - __main__ - INFO - train: epoch 043, top1 acc: 97.00%, top5 acc: 100.00%， losses: 3.00
+2021-12-24 14:02:53,090 - __main__ - INFO - val: epoch 043, auc: 0.97843, top1 acc: 92.56%, top5 acc: 100.00%, throughput: 231.61sample/s
+2021-12-24 14:03:57,004 - __main__ - INFO - train: epoch 044, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99352, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.87
+2021-12-24 14:04:58,029 - __main__ - INFO - train: epoch 044, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99725, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.77
+2021-12-24 14:05:59,217 - __main__ - INFO - train: epoch 044, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99371, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.04
+2021-12-24 14:07:01,301 - __main__ - INFO - train: epoch 044, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99795, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 14:07:41,025 - __main__ - INFO - train: epoch 044, top1 acc: 96.73%, top5 acc: 100.00%， losses: 3.01
+2021-12-24 14:08:19,628 - __main__ - INFO - val: epoch 044, auc: 0.97898, top1 acc: 92.56%, top5 acc: 100.00%, throughput: 224.05sample/s
+2021-12-24 14:09:24,487 - __main__ - INFO - train: epoch 045, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99593, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.99
+2021-12-24 14:10:26,211 - __main__ - INFO - train: epoch 045, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99869, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.00
+2021-12-24 14:11:26,887 - __main__ - INFO - train: epoch 045, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99761, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 14:12:27,463 - __main__ - INFO - train: epoch 045, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99821, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.03
+2021-12-24 14:13:07,470 - __main__ - INFO - train: epoch 045, top1 acc: 97.04%, top5 acc: 100.00%， losses: 3.00
+2021-12-24 14:13:45,596 - __main__ - INFO - val: epoch 045, auc: 0.97880, top1 acc: 92.85%, top5 acc: 100.00%, throughput: 226.84sample/s
+2021-12-24 14:14:50,234 - __main__ - INFO - train: epoch 046, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99595, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.87
+2021-12-24 14:15:52,589 - __main__ - INFO - train: epoch 046, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99661, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 14:16:53,539 - __main__ - INFO - train: epoch 046, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99269, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.07
+2021-12-24 14:17:53,960 - __main__ - INFO - train: epoch 046, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99845, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.09
+2021-12-24 14:18:34,687 - __main__ - INFO - train: epoch 046, top1 acc: 96.78%, top5 acc: 100.00%， losses: 3.00
+2021-12-24 14:19:13,118 - __main__ - INFO - val: epoch 046, auc: 0.97796, top1 acc: 92.25%, top5 acc: 100.00%, throughput: 225.04sample/s
+2021-12-24 14:20:18,078 - __main__ - INFO - train: epoch 047, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99393, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.04
+2021-12-24 14:21:19,439 - __main__ - INFO - train: epoch 047, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99916, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.21
+2021-12-24 14:22:22,499 - __main__ - INFO - train: epoch 047, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99759, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.20
+2021-12-24 14:23:24,558 - __main__ - INFO - train: epoch 047, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99720, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.82
+2021-12-24 14:24:04,674 - __main__ - INFO - train: epoch 047, top1 acc: 96.95%, top5 acc: 100.00%， losses: 3.00
+2021-12-24 14:24:43,164 - __main__ - INFO - val: epoch 047, auc: 0.97779, top1 acc: 92.43%, top5 acc: 100.00%, throughput: 224.71sample/s
+2021-12-24 14:25:46,552 - __main__ - INFO - train: epoch 048, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99781, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.26
+2021-12-24 14:26:48,223 - __main__ - INFO - train: epoch 048, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99679, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.57
+2021-12-24 14:27:49,701 - __main__ - INFO - train: epoch 048, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99465, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.23
+2021-12-24 14:28:50,793 - __main__ - INFO - train: epoch 048, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99769, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 14:29:31,370 - __main__ - INFO - train: epoch 048, top1 acc: 96.92%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 14:30:10,373 - __main__ - INFO - val: epoch 048, auc: 0.97799, top1 acc: 92.24%, top5 acc: 100.00%, throughput: 221.75sample/s
+2021-12-24 14:31:14,698 - __main__ - INFO - train: epoch 049, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99608, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.55
+2021-12-24 14:32:16,034 - __main__ - INFO - train: epoch 049, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99776, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.73
+2021-12-24 14:33:15,942 - __main__ - INFO - train: epoch 049, iter [0300, 0466], lr: 0.000005, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 2.58
+2021-12-24 14:34:16,352 - __main__ - INFO - train: epoch 049, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99632, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 14:34:55,494 - __main__ - INFO - train: epoch 049, top1 acc: 96.89%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 14:35:34,687 - __main__ - INFO - val: epoch 049, auc: 0.97769, top1 acc: 92.57%, top5 acc: 100.00%, throughput: 220.67sample/s
+2021-12-24 14:36:38,241 - __main__ - INFO - train: epoch 050, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99636, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 14:37:39,832 - __main__ - INFO - train: epoch 050, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99425, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.33
+2021-12-24 14:38:40,109 - __main__ - INFO - train: epoch 050, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99388, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.67
+2021-12-24 14:39:40,432 - __main__ - INFO - train: epoch 050, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99399, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.82
+2021-12-24 14:40:20,303 - __main__ - INFO - train: epoch 050, top1 acc: 96.95%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 14:40:57,993 - __main__ - INFO - val: epoch 050, auc: 0.97718, top1 acc: 92.27%, top5 acc: 100.00%, throughput: 229.47sample/s
+2021-12-24 14:42:01,676 - __main__ - INFO - train: epoch 051, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99509, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 14:43:02,434 - __main__ - INFO - train: epoch 051, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99768, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 14:44:03,070 - __main__ - INFO - train: epoch 051, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99975, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.73
+2021-12-24 14:45:03,708 - __main__ - INFO - train: epoch 051, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99603, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.88
+2021-12-24 14:45:43,800 - __main__ - INFO - train: epoch 051, top1 acc: 97.01%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 14:46:21,624 - __main__ - INFO - val: epoch 051, auc: 0.97610, top1 acc: 92.33%, top5 acc: 100.00%, throughput: 228.66sample/s
+2021-12-24 14:47:25,831 - __main__ - INFO - train: epoch 052, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99675, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.94
+2021-12-24 14:48:27,895 - __main__ - INFO - train: epoch 052, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99912, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.26
+2021-12-24 14:49:29,566 - __main__ - INFO - train: epoch 052, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99557, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.20
+2021-12-24 14:50:31,559 - __main__ - INFO - train: epoch 052, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99648, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.29
+2021-12-24 14:51:11,144 - __main__ - INFO - train: epoch 052, top1 acc: 97.04%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 14:51:49,369 - __main__ - INFO - val: epoch 052, auc: 0.97733, top1 acc: 92.38%, top5 acc: 100.00%, throughput: 226.26sample/s
+2021-12-24 14:52:53,622 - __main__ - INFO - train: epoch 053, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99918, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.23
+2021-12-24 14:53:54,463 - __main__ - INFO - train: epoch 053, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99502, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.11
+2021-12-24 14:54:55,437 - __main__ - INFO - train: epoch 053, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99973, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.11
+2021-12-24 14:55:57,445 - __main__ - INFO - train: epoch 053, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99893, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.14
+2021-12-24 14:56:38,371 - __main__ - INFO - train: epoch 053, top1 acc: 97.03%, top5 acc: 100.00%， losses: 2.98
+2021-12-24 14:57:17,058 - __main__ - INFO - val: epoch 053, auc: 0.97619, top1 acc: 92.22%, top5 acc: 100.00%, throughput: 223.57sample/s
+2021-12-24 14:58:24,090 - __main__ - INFO - train: epoch 054, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99776, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 14:59:25,619 - __main__ - INFO - train: epoch 054, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99877, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.33
+2021-12-24 15:00:28,932 - __main__ - INFO - train: epoch 054, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99470, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 15:01:32,652 - __main__ - INFO - train: epoch 054, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99828, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.80
+2021-12-24 15:02:14,095 - __main__ - INFO - train: epoch 054, top1 acc: 97.02%, top5 acc: 100.00%， losses: 2.98
+2021-12-24 15:02:52,992 - __main__ - INFO - val: epoch 054, auc: 0.97777, top1 acc: 92.28%, top5 acc: 100.00%, throughput: 222.35sample/s
+2021-12-24 15:04:01,342 - __main__ - INFO - train: epoch 055, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99874, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.68
+2021-12-24 15:05:04,278 - __main__ - INFO - train: epoch 055, iter [0200, 0466], lr: 0.000005, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 15:06:08,945 - __main__ - INFO - train: epoch 055, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99800, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.63
+2021-12-24 15:07:14,724 - __main__ - INFO - train: epoch 055, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99323, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.29
+2021-12-24 15:08:01,418 - __main__ - INFO - train: epoch 055, top1 acc: 96.86%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 15:08:51,615 - __main__ - INFO - val: epoch 055, auc: 0.97779, top1 acc: 92.39%, top5 acc: 100.00%, throughput: 172.30sample/s
+2021-12-24 15:10:08,309 - __main__ - INFO - train: epoch 056, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99778, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.58
+2021-12-24 15:11:18,374 - __main__ - INFO - train: epoch 056, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99754, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.56
+2021-12-24 15:12:30,368 - __main__ - INFO - train: epoch 056, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99685, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 15:13:35,557 - __main__ - INFO - train: epoch 056, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99875, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.59
+2021-12-24 15:14:15,790 - __main__ - INFO - train: epoch 056, top1 acc: 97.05%, top5 acc: 100.00%， losses: 2.98
+2021-12-24 15:14:55,758 - __main__ - INFO - val: epoch 056, auc: 0.97753, top1 acc: 92.51%, top5 acc: 100.00%, throughput: 216.40sample/s
+2021-12-24 15:16:01,905 - __main__ - INFO - train: epoch 057, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99002, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 15:17:09,060 - __main__ - INFO - train: epoch 057, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99703, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.65
+2021-12-24 15:18:16,692 - __main__ - INFO - train: epoch 057, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99702, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.23
+2021-12-24 15:19:24,870 - __main__ - INFO - train: epoch 057, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99821, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.87
+2021-12-24 15:20:09,725 - __main__ - INFO - train: epoch 057, top1 acc: 97.00%, top5 acc: 100.00%， losses: 2.99
+2021-12-24 15:20:53,148 - __main__ - INFO - val: epoch 057, auc: 0.97731, top1 acc: 92.52%, top5 acc: 100.00%, throughput: 199.18sample/s
+2021-12-24 15:22:02,904 - __main__ - INFO - train: epoch 058, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99510, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.52
+2021-12-24 15:23:10,928 - __main__ - INFO - train: epoch 058, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99477, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.54
+2021-12-24 15:24:22,133 - __main__ - INFO - train: epoch 058, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99625, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 15:25:33,033 - __main__ - INFO - train: epoch 058, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99947, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 15:26:18,818 - __main__ - INFO - train: epoch 058, top1 acc: 97.03%, top5 acc: 100.00%， losses: 2.98
+2021-12-24 15:27:04,680 - __main__ - INFO - val: epoch 058, auc: 0.97702, top1 acc: 92.37%, top5 acc: 100.00%, throughput: 188.58sample/s
+2021-12-24 15:28:19,474 - __main__ - INFO - train: epoch 059, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99973, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 15:29:31,572 - __main__ - INFO - train: epoch 059, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99822, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.35
+2021-12-24 15:30:42,376 - __main__ - INFO - train: epoch 059, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99664, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 15:31:52,856 - __main__ - INFO - train: epoch 059, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99487, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.75
+2021-12-24 15:32:37,980 - __main__ - INFO - train: epoch 059, top1 acc: 97.07%, top5 acc: 100.00%， losses: 2.98
+2021-12-24 15:33:26,909 - __main__ - INFO - val: epoch 059, auc: 0.97651, top1 acc: 92.23%, top5 acc: 100.00%, throughput: 176.76sample/s
+2021-12-24 15:34:41,566 - __main__ - INFO - train: epoch 060, iter [0100, 0466], lr: 0.000005, this batch auc: 0.99870, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.85
+2021-12-24 15:35:49,580 - __main__ - INFO - train: epoch 060, iter [0200, 0466], lr: 0.000005, this batch auc: 0.99899, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.69
+2021-12-24 15:36:54,973 - __main__ - INFO - train: epoch 060, iter [0300, 0466], lr: 0.000005, this batch auc: 0.99849, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.85
+2021-12-24 15:38:02,223 - __main__ - INFO - train: epoch 060, iter [0400, 0466], lr: 0.000005, this batch auc: 0.99487, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.13
+2021-12-24 15:38:46,187 - __main__ - INFO - train: epoch 060, top1 acc: 97.03%, top5 acc: 100.00%， losses: 2.98
+2021-12-24 15:39:30,123 - __main__ - INFO - val: epoch 060, auc: 0.97662, top1 acc: 92.27%, top5 acc: 100.00%, throughput: 196.85sample/s
+2021-12-24 15:40:42,004 - __main__ - INFO - train: epoch 061, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99617, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 15:41:46,191 - __main__ - INFO - train: epoch 061, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99701, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.74
+2021-12-24 15:42:52,733 - __main__ - INFO - train: epoch 061, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99542, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.88
+2021-12-24 15:44:00,483 - __main__ - INFO - train: epoch 061, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99118, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.86
+2021-12-24 15:44:44,452 - __main__ - INFO - train: epoch 061, top1 acc: 97.12%, top5 acc: 100.00%， losses: 2.97
+2021-12-24 15:45:33,008 - __main__ - INFO - val: epoch 061, auc: 0.97698, top1 acc: 92.32%, top5 acc: 100.00%, throughput: 178.12sample/s
+2021-12-24 15:46:46,896 - __main__ - INFO - train: epoch 062, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99975, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.64
+2021-12-24 15:47:59,589 - __main__ - INFO - train: epoch 062, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99972, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 15:49:11,074 - __main__ - INFO - train: epoch 062, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99595, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 15:50:19,561 - __main__ - INFO - train: epoch 062, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99822, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.84
+2021-12-24 15:51:02,190 - __main__ - INFO - train: epoch 062, top1 acc: 97.00%, top5 acc: 100.00%， losses: 2.97
+2021-12-24 15:51:49,147 - __main__ - INFO - val: epoch 062, auc: 0.97718, top1 acc: 92.16%, top5 acc: 100.00%, throughput: 184.19sample/s
+2021-12-24 15:52:58,458 - __main__ - INFO - train: epoch 063, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99714, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.03
+2021-12-24 15:54:05,957 - __main__ - INFO - train: epoch 063, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99480, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 15:55:16,115 - __main__ - INFO - train: epoch 063, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99924, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.70
+2021-12-24 15:56:30,254 - __main__ - INFO - train: epoch 063, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99735, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 15:57:18,525 - __main__ - INFO - train: epoch 063, top1 acc: 97.08%, top5 acc: 100.00%， losses: 2.97
+2021-12-24 15:58:02,983 - __main__ - INFO - val: epoch 063, auc: 0.97707, top1 acc: 92.31%, top5 acc: 100.00%, throughput: 194.54sample/s
+2021-12-24 15:59:16,547 - __main__ - INFO - train: epoch 064, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99863, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.15
+2021-12-24 16:00:27,289 - __main__ - INFO - train: epoch 064, iter [0200, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 16:01:38,398 - __main__ - INFO - train: epoch 064, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99380, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.95
+2021-12-24 16:02:51,138 - __main__ - INFO - train: epoch 064, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99779, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.51
+2021-12-24 16:03:36,653 - __main__ - INFO - train: epoch 064, top1 acc: 97.14%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:04:21,948 - __main__ - INFO - val: epoch 064, auc: 0.97693, top1 acc: 92.23%, top5 acc: 100.00%, throughput: 190.95sample/s
+2021-12-24 16:05:37,247 - __main__ - INFO - train: epoch 065, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99949, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.83
+2021-12-24 16:06:47,900 - __main__ - INFO - train: epoch 065, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99923, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.83
+2021-12-24 16:07:58,605 - __main__ - INFO - train: epoch 065, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99687, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 16:09:10,265 - __main__ - INFO - train: epoch 065, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99169, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.42
+2021-12-24 16:09:56,357 - __main__ - INFO - train: epoch 065, top1 acc: 97.11%, top5 acc: 100.00%， losses: 2.97
+2021-12-24 16:10:43,300 - __main__ - INFO - val: epoch 065, auc: 0.97708, top1 acc: 92.40%, top5 acc: 100.00%, throughput: 184.24sample/s
+2021-12-24 16:11:58,249 - __main__ - INFO - train: epoch 066, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99679, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.29
+2021-12-24 16:13:10,285 - __main__ - INFO - train: epoch 066, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99818, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.99
+2021-12-24 16:14:19,217 - __main__ - INFO - train: epoch 066, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99615, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 16:15:25,291 - __main__ - INFO - train: epoch 066, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99333, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.17
+2021-12-24 16:16:08,085 - __main__ - INFO - train: epoch 066, top1 acc: 97.22%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:16:45,613 - __main__ - INFO - val: epoch 066, auc: 0.97631, top1 acc: 92.06%, top5 acc: 100.00%, throughput: 230.47sample/s
+2021-12-24 16:17:51,192 - __main__ - INFO - train: epoch 067, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99923, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.81
+2021-12-24 16:18:57,250 - __main__ - INFO - train: epoch 067, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99974, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 16:20:04,940 - __main__ - INFO - train: epoch 067, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99664, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.95
+2021-12-24 16:21:10,410 - __main__ - INFO - train: epoch 067, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99578, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 2.80
+2021-12-24 16:21:52,663 - __main__ - INFO - train: epoch 067, top1 acc: 97.23%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:22:38,336 - __main__ - INFO - val: epoch 067, auc: 0.97711, top1 acc: 92.06%, top5 acc: 100.00%, throughput: 189.36sample/s
+2021-12-24 16:23:50,121 - __main__ - INFO - train: epoch 068, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99926, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.64
+2021-12-24 16:24:58,113 - __main__ - INFO - train: epoch 068, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99872, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.72
+2021-12-24 16:26:06,088 - __main__ - INFO - train: epoch 068, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99692, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.90
+2021-12-24 16:27:12,592 - __main__ - INFO - train: epoch 068, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99975, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.57
+2021-12-24 16:27:55,202 - __main__ - INFO - train: epoch 068, top1 acc: 97.28%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:28:38,213 - __main__ - INFO - val: epoch 068, auc: 0.97714, top1 acc: 92.50%, top5 acc: 100.00%, throughput: 201.09sample/s
+2021-12-24 16:29:47,670 - __main__ - INFO - train: epoch 069, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99974, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.86
+2021-12-24 16:30:54,051 - __main__ - INFO - train: epoch 069, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99701, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.86
+2021-12-24 16:31:58,491 - __main__ - INFO - train: epoch 069, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99711, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.07
+2021-12-24 16:33:05,454 - __main__ - INFO - train: epoch 069, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99973, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.95
+2021-12-24 16:33:48,994 - __main__ - INFO - train: epoch 069, top1 acc: 97.16%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:34:33,681 - __main__ - INFO - val: epoch 069, auc: 0.97747, top1 acc: 92.23%, top5 acc: 100.00%, throughput: 193.55sample/s
+2021-12-24 16:35:42,531 - __main__ - INFO - train: epoch 070, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99720, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.95
+2021-12-24 16:36:49,926 - __main__ - INFO - train: epoch 070, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99869, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 16:37:57,612 - __main__ - INFO - train: epoch 070, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99838, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.13
+2021-12-24 16:39:05,249 - __main__ - INFO - train: epoch 070, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99549, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 16:39:48,783 - __main__ - INFO - train: epoch 070, top1 acc: 97.17%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:40:33,337 - __main__ - INFO - val: epoch 070, auc: 0.97633, top1 acc: 92.17%, top5 acc: 100.00%, throughput: 194.12sample/s
+2021-12-24 16:41:41,923 - __main__ - INFO - train: epoch 071, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99974, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 16:42:47,517 - __main__ - INFO - train: epoch 071, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99891, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 16:43:53,299 - __main__ - INFO - train: epoch 071, iter [0300, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.65
+2021-12-24 16:44:58,289 - __main__ - INFO - train: epoch 071, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99865, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.98
+2021-12-24 16:45:42,601 - __main__ - INFO - train: epoch 071, top1 acc: 97.28%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:46:28,643 - __main__ - INFO - val: epoch 071, auc: 0.97581, top1 acc: 92.01%, top5 acc: 100.00%, throughput: 187.84sample/s
+2021-12-24 16:47:42,374 - __main__ - INFO - train: epoch 072, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99786, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 16:48:49,568 - __main__ - INFO - train: epoch 072, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99730, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.67
+2021-12-24 16:49:57,454 - __main__ - INFO - train: epoch 072, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99694, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.83
+2021-12-24 16:51:07,846 - __main__ - INFO - train: epoch 072, iter [0400, 0466], lr: 0.000001, this batch auc: 0.98906, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.11
+2021-12-24 16:51:51,061 - __main__ - INFO - train: epoch 072, top1 acc: 97.30%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 16:52:35,004 - __main__ - INFO - val: epoch 072, auc: 0.97636, top1 acc: 92.17%, top5 acc: 100.00%, throughput: 196.82sample/s
+2021-12-24 16:53:45,205 - __main__ - INFO - train: epoch 073, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99036, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.36
+2021-12-24 16:54:52,322 - __main__ - INFO - train: epoch 073, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99477, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.97
+2021-12-24 16:55:59,664 - __main__ - INFO - train: epoch 073, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99893, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 16:57:05,987 - __main__ - INFO - train: epoch 073, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99951, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.44
+2021-12-24 16:57:51,430 - __main__ - INFO - train: epoch 073, top1 acc: 97.31%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 16:58:40,602 - __main__ - INFO - val: epoch 073, auc: 0.97666, top1 acc: 92.19%, top5 acc: 100.00%, throughput: 175.89sample/s
+2021-12-24 16:59:54,374 - __main__ - INFO - train: epoch 074, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99580, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.87
+2021-12-24 17:01:03,331 - __main__ - INFO - train: epoch 074, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99947, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 17:02:12,426 - __main__ - INFO - train: epoch 074, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99669, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 17:03:22,370 - __main__ - INFO - train: epoch 074, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99258, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 3.27
+2021-12-24 17:04:05,806 - __main__ - INFO - train: epoch 074, top1 acc: 97.16%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 17:04:49,586 - __main__ - INFO - val: epoch 074, auc: 0.97693, top1 acc: 92.16%, top5 acc: 100.00%, throughput: 197.55sample/s
+2021-12-24 17:06:02,825 - __main__ - INFO - train: epoch 075, iter [0100, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 2.89
+2021-12-24 17:07:09,111 - __main__ - INFO - train: epoch 075, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99609, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.59
+2021-12-24 17:08:13,745 - __main__ - INFO - train: epoch 075, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99803, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.51
+2021-12-24 17:09:16,745 - __main__ - INFO - train: epoch 075, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99816, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.91
+2021-12-24 17:09:58,523 - __main__ - INFO - train: epoch 075, top1 acc: 97.16%, top5 acc: 100.00%， losses: 2.97
+2021-12-24 17:10:38,150 - __main__ - INFO - val: epoch 075, auc: 0.97685, top1 acc: 92.29%, top5 acc: 100.00%, throughput: 218.26sample/s
+2021-12-24 17:11:45,272 - __main__ - INFO - train: epoch 076, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99875, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.79
+2021-12-24 17:12:49,311 - __main__ - INFO - train: epoch 076, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99508, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.31
+2021-12-24 17:13:52,053 - __main__ - INFO - train: epoch 076, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99945, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.19
+2021-12-24 17:14:56,393 - __main__ - INFO - train: epoch 076, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99774, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.99
+2021-12-24 17:15:38,295 - __main__ - INFO - train: epoch 076, top1 acc: 97.23%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 17:16:18,473 - __main__ - INFO - val: epoch 076, auc: 0.97601, top1 acc: 92.07%, top5 acc: 100.00%, throughput: 215.27sample/s
+2021-12-24 17:17:26,569 - __main__ - INFO - train: epoch 077, iter [0100, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 3.17
+2021-12-24 17:18:33,119 - __main__ - INFO - train: epoch 077, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99975, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.74
+2021-12-24 17:19:36,826 - __main__ - INFO - train: epoch 077, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99567, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.03
+2021-12-24 17:20:38,455 - __main__ - INFO - train: epoch 077, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99427, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.85
+2021-12-24 17:21:18,475 - __main__ - INFO - train: epoch 077, top1 acc: 97.26%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 17:21:58,670 - __main__ - INFO - val: epoch 077, auc: 0.97668, top1 acc: 92.10%, top5 acc: 100.00%, throughput: 215.18sample/s
+2021-12-24 17:23:06,130 - __main__ - INFO - train: epoch 078, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99401, top1 acc: 94.53%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 17:24:11,218 - __main__ - INFO - train: epoch 078, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99317, top1 acc: 92.97%, top5 acc: 100.00%, loss_total: 3.19
+2021-12-24 17:25:13,984 - __main__ - INFO - train: epoch 078, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99974, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 17:26:17,781 - __main__ - INFO - train: epoch 078, iter [0400, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 17:27:00,197 - __main__ - INFO - train: epoch 078, top1 acc: 97.36%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 17:27:40,485 - __main__ - INFO - val: epoch 078, auc: 0.97708, top1 acc: 92.38%, top5 acc: 100.00%, throughput: 214.67sample/s
+2021-12-24 17:28:46,008 - __main__ - INFO - train: epoch 079, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99975, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.81
+2021-12-24 17:29:50,510 - __main__ - INFO - train: epoch 079, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99869, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.08
+2021-12-24 17:30:55,601 - __main__ - INFO - train: epoch 079, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99638, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.90
+2021-12-24 17:31:56,880 - __main__ - INFO - train: epoch 079, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99923, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 17:32:39,561 - __main__ - INFO - train: epoch 079, top1 acc: 97.21%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 17:33:18,805 - __main__ - INFO - val: epoch 079, auc: 0.97620, top1 acc: 92.19%, top5 acc: 100.00%, throughput: 220.38sample/s
+2021-12-24 17:34:26,641 - __main__ - INFO - train: epoch 080, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99877, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.44
+2021-12-24 17:35:28,213 - __main__ - INFO - train: epoch 080, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99949, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 17:36:30,854 - __main__ - INFO - train: epoch 080, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99613, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.14
+2021-12-24 17:37:33,818 - __main__ - INFO - train: epoch 080, iter [0400, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.87
+2021-12-24 17:38:13,128 - __main__ - INFO - train: epoch 080, top1 acc: 97.27%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 17:38:51,429 - __main__ - INFO - val: epoch 080, auc: 0.97692, top1 acc: 92.21%, top5 acc: 100.00%, throughput: 225.81sample/s
+2021-12-24 17:39:56,144 - __main__ - INFO - train: epoch 081, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99925, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.84
+2021-12-24 17:41:00,304 - __main__ - INFO - train: epoch 081, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99716, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.42
+2021-12-24 17:42:02,037 - __main__ - INFO - train: epoch 081, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99380, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.17
+2021-12-24 17:43:03,762 - __main__ - INFO - train: epoch 081, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99698, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.82
+2021-12-24 17:43:43,895 - __main__ - INFO - train: epoch 081, top1 acc: 97.25%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 17:44:23,374 - __main__ - INFO - val: epoch 081, auc: 0.97722, top1 acc: 92.34%, top5 acc: 100.00%, throughput: 219.07sample/s
+2021-12-24 17:45:27,088 - __main__ - INFO - train: epoch 082, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99737, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.09
+2021-12-24 17:46:28,875 - __main__ - INFO - train: epoch 082, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99814, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 17:47:27,082 - __main__ - INFO - train: epoch 082, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99851, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.80
+2021-12-24 17:48:25,590 - __main__ - INFO - train: epoch 082, iter [0400, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.25
+2021-12-24 17:49:03,485 - __main__ - INFO - train: epoch 082, top1 acc: 97.27%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 17:49:42,288 - __main__ - INFO - val: epoch 082, auc: 0.97605, top1 acc: 91.99%, top5 acc: 100.00%, throughput: 222.89sample/s
+2021-12-24 17:50:47,761 - __main__ - INFO - train: epoch 083, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99527, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 17:51:49,119 - __main__ - INFO - train: epoch 083, iter [0200, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 17:52:51,314 - __main__ - INFO - train: epoch 083, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99740, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 17:53:53,866 - __main__ - INFO - train: epoch 083, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99972, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.14
+2021-12-24 17:54:33,244 - __main__ - INFO - train: epoch 083, top1 acc: 97.27%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 17:55:12,688 - __main__ - INFO - val: epoch 083, auc: 0.97670, top1 acc: 92.16%, top5 acc: 100.00%, throughput: 219.27sample/s
+2021-12-24 17:56:18,704 - __main__ - INFO - train: epoch 084, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99629, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.17
+2021-12-24 17:57:20,306 - __main__ - INFO - train: epoch 084, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99949, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.89
+2021-12-24 17:58:20,702 - __main__ - INFO - train: epoch 084, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99324, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.56
+2021-12-24 17:59:21,755 - __main__ - INFO - train: epoch 084, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99873, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.88
+2021-12-24 18:00:01,825 - __main__ - INFO - train: epoch 084, top1 acc: 97.32%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 18:00:39,913 - __main__ - INFO - val: epoch 084, auc: 0.97553, top1 acc: 92.05%, top5 acc: 100.00%, throughput: 227.08sample/s
+2021-12-24 18:01:43,207 - __main__ - INFO - train: epoch 085, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99752, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.68
+2021-12-24 18:02:46,416 - __main__ - INFO - train: epoch 085, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99788, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 18:03:47,575 - __main__ - INFO - train: epoch 085, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99615, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.83
+2021-12-24 18:04:49,482 - __main__ - INFO - train: epoch 085, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99598, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 18:05:29,111 - __main__ - INFO - train: epoch 085, top1 acc: 97.12%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:06:06,155 - __main__ - INFO - val: epoch 085, auc: 0.97653, top1 acc: 92.13%, top5 acc: 100.00%, throughput: 233.48sample/s
+2021-12-24 18:07:08,652 - __main__ - INFO - train: epoch 086, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99621, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.22
+2021-12-24 18:08:08,415 - __main__ - INFO - train: epoch 086, iter [0200, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 2.95
+2021-12-24 18:09:10,975 - __main__ - INFO - train: epoch 086, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99873, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.80
+2021-12-24 18:10:12,078 - __main__ - INFO - train: epoch 086, iter [0400, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.68
+2021-12-24 18:10:51,939 - __main__ - INFO - train: epoch 086, top1 acc: 97.17%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:11:28,981 - __main__ - INFO - val: epoch 086, auc: 0.97630, top1 acc: 92.08%, top5 acc: 100.00%, throughput: 233.48sample/s
+2021-12-24 18:12:32,132 - __main__ - INFO - train: epoch 087, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99439, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.50
+2021-12-24 18:13:33,048 - __main__ - INFO - train: epoch 087, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99776, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.82
+2021-12-24 18:14:34,407 - __main__ - INFO - train: epoch 087, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99851, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.82
+2021-12-24 18:15:36,141 - __main__ - INFO - train: epoch 087, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99185, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.11
+2021-12-24 18:16:16,019 - __main__ - INFO - train: epoch 087, top1 acc: 97.16%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:16:53,971 - __main__ - INFO - val: epoch 087, auc: 0.97671, top1 acc: 92.00%, top5 acc: 100.00%, throughput: 227.89sample/s
+2021-12-24 18:17:57,702 - __main__ - INFO - train: epoch 088, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99925, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.73
+2021-12-24 18:18:59,403 - __main__ - INFO - train: epoch 088, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99900, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.91
+2021-12-24 18:20:00,369 - __main__ - INFO - train: epoch 088, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99228, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.74
+2021-12-24 18:21:00,918 - __main__ - INFO - train: epoch 088, iter [0400, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.94
+2021-12-24 18:21:40,067 - __main__ - INFO - train: epoch 088, top1 acc: 97.27%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:22:17,162 - __main__ - INFO - val: epoch 088, auc: 0.97719, top1 acc: 92.23%, top5 acc: 100.00%, throughput: 233.15sample/s
+2021-12-24 18:23:21,029 - __main__ - INFO - train: epoch 089, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99687, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.13
+2021-12-24 18:24:22,057 - __main__ - INFO - train: epoch 089, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99900, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.75
+2021-12-24 18:25:22,664 - __main__ - INFO - train: epoch 089, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99793, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 18:26:23,011 - __main__ - INFO - train: epoch 089, iter [0400, 0466], lr: 0.000001, this batch auc: 0.99892, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 18:27:02,518 - __main__ - INFO - train: epoch 089, top1 acc: 97.14%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:27:41,030 - __main__ - INFO - val: epoch 089, auc: 0.97683, top1 acc: 92.34%, top5 acc: 100.00%, throughput: 224.57sample/s
+2021-12-24 18:28:45,712 - __main__ - INFO - train: epoch 090, iter [0100, 0466], lr: 0.000001, this batch auc: 0.99462, top1 acc: 93.75%, top5 acc: 100.00%, loss_total: 2.91
+2021-12-24 18:29:46,425 - __main__ - INFO - train: epoch 090, iter [0200, 0466], lr: 0.000001, this batch auc: 0.99826, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.64
+2021-12-24 18:30:46,429 - __main__ - INFO - train: epoch 090, iter [0300, 0466], lr: 0.000001, this batch auc: 0.99876, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.76
+2021-12-24 18:31:46,990 - __main__ - INFO - train: epoch 090, iter [0400, 0466], lr: 0.000001, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.72
+2021-12-24 18:32:27,137 - __main__ - INFO - train: epoch 090, top1 acc: 97.13%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:33:03,695 - __main__ - INFO - val: epoch 090, auc: 0.97687, top1 acc: 92.24%, top5 acc: 100.00%, throughput: 236.58sample/s
+2021-12-24 18:34:06,979 - __main__ - INFO - train: epoch 091, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99389, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 18:35:08,253 - __main__ - INFO - train: epoch 091, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99798, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.35
+2021-12-24 18:36:09,416 - __main__ - INFO - train: epoch 091, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99262, top1 acc: 92.19%, top5 acc: 100.00%, loss_total: 3.16
+2021-12-24 18:37:10,900 - __main__ - INFO - train: epoch 091, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99417, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 18:37:51,256 - __main__ - INFO - train: epoch 091, top1 acc: 97.12%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:38:29,947 - __main__ - INFO - val: epoch 091, auc: 0.97640, top1 acc: 92.14%, top5 acc: 100.00%, throughput: 223.54sample/s
+2021-12-24 18:39:32,798 - __main__ - INFO - train: epoch 092, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99845, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.89
+2021-12-24 18:40:34,178 - __main__ - INFO - train: epoch 092, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99829, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.53
+2021-12-24 18:41:36,062 - __main__ - INFO - train: epoch 092, iter [0300, 0466], lr: 0.000000, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.06
+2021-12-24 18:42:36,764 - __main__ - INFO - train: epoch 092, iter [0400, 0466], lr: 0.000000, this batch auc: 1.00000, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 3.26
+2021-12-24 18:43:16,887 - __main__ - INFO - train: epoch 092, top1 acc: 97.24%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 18:43:54,311 - __main__ - INFO - val: epoch 092, auc: 0.97698, top1 acc: 92.23%, top5 acc: 100.00%, throughput: 231.11sample/s
+2021-12-24 18:44:58,265 - __main__ - INFO - train: epoch 093, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99458, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 2.69
+2021-12-24 18:45:58,976 - __main__ - INFO - train: epoch 093, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99897, top1 acc: 99.22%, top5 acc: 100.00%, loss_total: 2.76
+2021-12-24 18:46:59,649 - __main__ - INFO - train: epoch 093, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99839, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.02
+2021-12-24 18:48:00,797 - __main__ - INFO - train: epoch 093, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99759, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.17
+2021-12-24 18:48:40,536 - __main__ - INFO - train: epoch 093, top1 acc: 97.34%, top5 acc: 100.00%， losses: 2.95
+2021-12-24 18:49:18,410 - __main__ - INFO - val: epoch 093, auc: 0.97573, top1 acc: 92.09%, top5 acc: 100.00%, throughput: 228.36sample/s
+2021-12-24 18:50:22,792 - __main__ - INFO - train: epoch 094, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99819, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.91
+2021-12-24 18:51:23,529 - __main__ - INFO - train: epoch 094, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99917, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.09
+2021-12-24 18:52:24,626 - __main__ - INFO - train: epoch 094, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99669, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 18:53:25,356 - __main__ - INFO - train: epoch 094, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99401, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.22
+2021-12-24 18:54:05,037 - __main__ - INFO - train: epoch 094, top1 acc: 97.21%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 18:54:42,918 - __main__ - INFO - val: epoch 094, auc: 0.97626, top1 acc: 92.08%, top5 acc: 100.00%, throughput: 228.31sample/s
+2021-12-24 18:55:46,718 - __main__ - INFO - train: epoch 095, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99038, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.19
+2021-12-24 18:56:47,553 - __main__ - INFO - train: epoch 095, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99557, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.09
+2021-12-24 18:57:48,356 - __main__ - INFO - train: epoch 095, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99491, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.00
+2021-12-24 18:58:50,146 - __main__ - INFO - train: epoch 095, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99777, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.73
+2021-12-24 18:59:29,805 - __main__ - INFO - train: epoch 095, top1 acc: 97.28%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 19:00:06,253 - __main__ - INFO - val: epoch 095, auc: 0.97707, top1 acc: 92.15%, top5 acc: 100.00%, throughput: 237.30sample/s
+2021-12-24 19:01:09,720 - __main__ - INFO - train: epoch 096, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99598, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 3.05
+2021-12-24 19:02:10,130 - __main__ - INFO - train: epoch 096, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99848, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.79
+2021-12-24 19:03:11,314 - __main__ - INFO - train: epoch 096, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99744, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.95
+2021-12-24 19:04:12,294 - __main__ - INFO - train: epoch 096, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99696, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.08
+2021-12-24 19:04:51,824 - __main__ - INFO - train: epoch 096, top1 acc: 97.23%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 19:05:30,638 - __main__ - INFO - val: epoch 096, auc: 0.97687, top1 acc: 92.28%, top5 acc: 100.00%, throughput: 222.83sample/s
+2021-12-24 19:06:34,396 - __main__ - INFO - train: epoch 097, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99769, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.08
+2021-12-24 19:07:35,599 - __main__ - INFO - train: epoch 097, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99672, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 19:08:36,633 - __main__ - INFO - train: epoch 097, iter [0300, 0466], lr: 0.000000, this batch auc: 1.00000, top1 acc: 100.00%, top5 acc: 100.00%, loss_total: 3.01
+2021-12-24 19:09:39,829 - __main__ - INFO - train: epoch 097, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99875, top1 acc: 96.88%, top5 acc: 100.00%, loss_total: 2.72
+2021-12-24 19:10:20,581 - __main__ - INFO - train: epoch 097, top1 acc: 97.16%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 19:10:58,717 - __main__ - INFO - val: epoch 097, auc: 0.97628, top1 acc: 92.05%, top5 acc: 100.00%, throughput: 226.79sample/s
+2021-12-24 19:12:04,249 - __main__ - INFO - train: epoch 098, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99770, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 3.37
+2021-12-24 19:13:07,553 - __main__ - INFO - train: epoch 098, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99754, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.25
+2021-12-24 19:14:09,436 - __main__ - INFO - train: epoch 098, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99716, top1 acc: 95.31%, top5 acc: 100.00%, loss_total: 3.10
+2021-12-24 19:15:10,530 - __main__ - INFO - train: epoch 098, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99877, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.65
+2021-12-24 19:15:50,741 - __main__ - INFO - train: epoch 098, top1 acc: 97.20%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 19:16:29,996 - __main__ - INFO - val: epoch 098, auc: 0.97733, top1 acc: 92.18%, top5 acc: 100.00%, throughput: 220.33sample/s
+2021-12-24 19:17:34,018 - __main__ - INFO - train: epoch 099, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99867, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.92
+2021-12-24 19:18:36,396 - __main__ - INFO - train: epoch 099, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99349, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.93
+2021-12-24 19:19:38,321 - __main__ - INFO - train: epoch 099, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99950, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.84
+2021-12-24 19:20:40,513 - __main__ - INFO - train: epoch 099, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99946, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 3.12
+2021-12-24 19:21:20,870 - __main__ - INFO - train: epoch 099, top1 acc: 97.33%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 19:21:58,654 - __main__ - INFO - val: epoch 099, auc: 0.97628, top1 acc: 92.16%, top5 acc: 100.00%, throughput: 228.90sample/s
+2021-12-24 19:23:03,465 - __main__ - INFO - train: epoch 100, iter [0100, 0466], lr: 0.000000, this batch auc: 0.99747, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 19:24:04,724 - __main__ - INFO - train: epoch 100, iter [0200, 0466], lr: 0.000000, this batch auc: 0.99896, top1 acc: 97.66%, top5 acc: 100.00%, loss_total: 2.94
+2021-12-24 19:25:07,367 - __main__ - INFO - train: epoch 100, iter [0300, 0466], lr: 0.000000, this batch auc: 0.99899, top1 acc: 98.44%, top5 acc: 100.00%, loss_total: 2.68
+2021-12-24 19:26:08,251 - __main__ - INFO - train: epoch 100, iter [0400, 0466], lr: 0.000000, this batch auc: 0.99561, top1 acc: 96.09%, top5 acc: 100.00%, loss_total: 2.96
+2021-12-24 19:26:48,957 - __main__ - INFO - train: epoch 100, top1 acc: 97.26%, top5 acc: 100.00%， losses: 2.96
+2021-12-24 19:27:27,720 - __main__ - INFO - val: epoch 100, auc: 0.97634, top1 acc: 92.07%, top5 acc: 100.00%, throughput: 223.12sample/s
+2021-12-24 19:27:29,905 - __main__ - INFO - finish training, total training time: 9.20 hours
