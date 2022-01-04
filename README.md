@@ -19,13 +19,51 @@ python dataset_generator.py
 
 ## 基于SSIM的mask图像生成
 
-若需测试基于SSIM的mask图像生成效果，提供了相应的程序于
+若需测试基于SSIM的mask图像生成效果，提供了相应的程序于`mask_generator`文件夹中
+
+可将对应的真假脸图像至于`data`文件夹的`fake`与`real`文件夹中，对应的修改`MSSIM.py`中关于图像文件的目录，即可查看基于SSIM的mask图像的效果，其具体的运行指令如下：
+
+```
+python MSSIM.py
+```
 
 ## I2G mask图像生成
 
 本项目基于Face-X-ray的开源代码，对于I2G mask 图像生成进行了实现，其具体实现在`X-ray Data Generator`下，我们应我们的需要针对不同视频的不同真实人脸做FaceBlending，在生成真假脸图像的同时，得到其相应的mask图像
 
+首先，需要建立以下的文件结构的`dataset`文件夹于`X-ray Data Generator`下：
 
+dataset
+- images
+  - fake
+  - fake_mask
+  - real
+  - real_mask
+  - original
+    - 000
+    - 001
+    - ...
+    - 999  
+- landmarks
+
+接着，需要使用以下指令生成相应视频中所截取图像的landmark
+
+```
+python landmarkDBGenerator.py
+```
+
+此处，生成landmarks文件将至于对应的`dataset/landmarks`文件夹的相应序号的文件夹内，具体如下所示：
+
+landmarks
+- 000
+- 001
+- ...
+- 999
+
+其生成图像的具体指令如下
+```
+python dataSetGenerator_cross.py
+```
 
 ## 网络的训练与测试 
 
