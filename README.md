@@ -1,7 +1,32 @@
 # CS386-Deepfake-detection
 ## 视频流真假人脸对应截取
+
+对于相应的视频流中的真假人脸提取，本项目使用`face_recognition`方法来事先真假人脸的对应截取，具体代码位于`video_cutter`文件夹下
+
+我们的程序默认设置为截取CD2数据集视频，若需截取其他特定文件夹下的对应视频帧中的人脸，请详见`video_cutter`文件夹下的`dataset_generator.py`程序
+
+在`video_cutter`文件夹下下载CD2的数据集后，需先在本地新建以下文件结构：
+
+  Your datast name(此处默认为CD2)
+  - fake
+  - real
+
+接着输入以下指令生成数据集
+
+```
+python dataset_generator.py
+```
+
 ## 基于SSIM的mask图像生成
+
+若需测试基于SSIM的mask图像生成效果，提供了相应的程序于
+
 ## I2G mask图像生成
+
+本项目基于Face-X-ray的开源代码，对于I2G mask 图像生成进行了实现，其具体实现在`X-ray Data Generator`下，我们应我们的需要针对不同视频的不同真实人脸做FaceBlending，在生成真假脸图像的同时，得到其相应的mask图像
+
+
+
 ## 网络的训练与测试 
 
 ### 数据集
